@@ -22,7 +22,12 @@ import {
   FaUserFriends,
   FaUserGraduate,
 } from "react-icons/fa";
-import { MdClass, MdLibraryAdd, MdLibraryBooks, MdPayment } from "react-icons/md";
+import {
+  MdClass,
+  MdLibraryAdd,
+  MdLibraryBooks,
+  MdPayment,
+} from "react-icons/md";
 
 const CourseDashboard = ({ params }) => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -375,12 +380,10 @@ const CourseDashboard = ({ params }) => {
   }
 
   const categoryContent = {
-    Chat: (
-      presentCourse ? (
-        <CourseChat courseData={presentCourse} />
-      ) : (
-        <div>Course data is not available</div>
-      )
+    Chat: presentCourse ? (
+      <CourseChat courseData={presentCourse} />
+    ) : (
+      <div>Course data is not available</div>
     ),
     Notice: (
       <div>
@@ -491,7 +494,11 @@ const CourseDashboard = ({ params }) => {
               <div className="flex items-center gap-3">
                 <div className="avatar">
                   <div className="w-16 rounded-full">
-                    <Image src="https://i.ibb.co/2v8qVbc/photo-1592009309602-1dde752490ae.jpg" alt="" fill={true} />
+                    <Image
+                      src="https://i.ibb.co/2v8qVbc/photo-1592009309602-1dde752490ae.jpg"
+                      alt=""
+                      fill={true}
+                    />
                   </div>
                 </div>
                 <div>
@@ -511,7 +518,11 @@ const CourseDashboard = ({ params }) => {
               <div className="flex gap-3 mt-5 items-center">
                 <div className="avatar">
                   <div className="w-12 rounded-full">
-                    <Image src="https://i.ibb.co/Pgrgt4S/clf47wwin001nmh08aqvomr5k-1.jpg" alt="" fill={true} />
+                    <Image
+                      src="https://i.ibb.co/Pgrgt4S/clf47wwin001nmh08aqvomr5k-1.jpg"
+                      alt=""
+                      fill={true}
+                    />
                   </div>
                 </div>
                 <input
@@ -947,36 +958,45 @@ const CourseDashboard = ({ params }) => {
               <h5 className="font-semibold text-2xl">
                 {presentCourse.ownerName}
               </h5>
-              <Link href="/" ><BiLogoZoom size="2.5em" color="white" /></Link>
+              <Link href="/">
+                <BiLogoZoom size="2.5em" color="white" />
+              </Link>
             </div>
           </div>
           <div className="text-start">
             <li>
               {categories.map((category, index) => (
                 <Link
-                  as="#"
+                  href="#"
                   key={index}
-                  className={`font-semibold text-xl mb-2 flex flex-col items-start ${tabIndex === index
-                    ? "tab-active text-emerald-400 text-start pl-2 border-l-2 border-[#0083db]"
-                    : ""
-                    }`}
+                  className={`font-semibold text-xl mb-2 flex flex-col items-start ${
+                    tabIndex === index
+                      ? "tab-active text-emerald-400 text-start pl-2 border-l-2 border-[#0083db]"
+                      : ""
+                  }`}
                   onClick={() => handleTabClick(index)}
                 >
                   {category.charAt(0).toUpperCase() + category.slice(1)}
                 </Link>
               ))}
             </li>
-            <li><p className="text-red-600 cursor-pointer font-semibold text-xl">
-              Delete this class
-            </p></li>
+            <li>
+              <p className="text-red-600 cursor-pointer font-semibold text-xl">
+                Delete this class
+              </p>
+            </li>
           </div>
           {/* {navOptions} */}
           <div className="divider"></div>
           <li>
-            <Link href="/"><FaHome></FaHome> Home Page</Link>
+            <Link href="/">
+              <FaHome></FaHome> Home Page
+            </Link>
           </li>
           <li>
-            <Link href="/courses"><FaSignOutAlt></FaSignOutAlt> Courses</Link>
+            <Link href="/courses">
+              <FaSignOutAlt></FaSignOutAlt> Courses
+            </Link>
           </li>
           {/* )} */}
         </ul>
@@ -1019,7 +1039,7 @@ const CourseDashboard = ({ params }) => {
     //       <div className="">
     //         {categories.map((category, index) => (
     //           <Link
-    //             as="#"
+    //             href="#"
     //             key={index}
     //             className={`font-semibold text-xl mb-2 flex flex-col ${tabIndex === index
     //               ? "tab-active text-[#0083db] pl-2 border-l-2 border-[#0083db]"

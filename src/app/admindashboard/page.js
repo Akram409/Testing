@@ -1050,7 +1050,7 @@ const CourseDashboard = ({ params }) => {
                     <div className="">
                         {categories.map((category, index) => (
                             <Link
-                                as="#"
+                                href="#"
                                 key={index}
                                 className={`font-semibold text-xl mb-2 flex flex-col ${tabIndex === index
                                     ? "tab-active text-[#0083db] pl-2 border-l-2 border-[#0083db]"

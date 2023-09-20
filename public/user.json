@@ -1,0 +1,27 @@
+[
+  {
+    "username": "John Doe",
+    "email": "john.doe@example.com",
+    "image": "https://i.ibb.co/2v8qVbc/photo-1592009309602-1dde752490ae.jpg"
+  },
+  {
+    "username": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "image": "https://i.ibb.co/2v8qVbc/photo-1592009309602-1dde752490ae.jpg"
+  },
+  {
+    "username": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "image": "https://i.ibb.co/2v8qVbc/photo-1592009309602-1dde752490ae.jpg"
+  },
+  {
+    "username": "Robert Brown",
+    "email": "robert.brown@example.com",
+    "image": "https://i.ibb.co/2v8qVbc/photo-1592009309602-1dde752490ae.jpg"
+  },
+  {
+    "username": "Ella Wilson",
+    "email": "ella.wilson@example.com",
+    "image": "https://i.ibb.co/2v8qVbc/photo-1592009309602-1dde752490ae.jpg"
+  }
+]
